@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap')
+</style>
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h2,h3,h4,h5,h6, strong {
+    color: rgb(45, 4, 4) ;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: rgb(140, 132, 132)
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+ /* Buttons */
+ .btn {
+    padding: 1rem 1.5rem;
+    background: rgb(237, 237, 237);
+    border: 1.5px solid rgb(138, 134, 134)
+    cursor: pointer;
+    transtion: .2s ease-in-out;
+ }
+
+ .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px ;
+ }
+
+ /* Titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+ .pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: rgb(121, 117, 117);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+ }
+
+ .pre-title::before {
+    content: "" ;
+    width: 30px;
+    height: 1px;
+    background: #878585;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+ }
+
+ /* Layout */
+ .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+ }
+
+/* Logo and Navigation Menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo  a {
+    color: rgb(55, 165, 48)
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: black;
+}
+
+/* Burger */
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* Hero Section */
+#hero {
+    margin-left: 20px;
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: rgb(79, 77, 75);
+}
+
+.hero-right img {
+    width: 90%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* House Section */
+#house {
+    background-color: #7b7272;
+    padding: 6rem 0;
+}
+
+.house .pre-title {
+    margin: 0 auto;
+}
+
+.house-title {
+    text-align: center;
+}
+
+.house {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f0eeee;
+    border-radius: 0.7rem;
+}
+
+.house h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.house-icon {
+    background: rgb(55, 165, 48) ;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.house-icon svg {
+    fill: wheat;
+}
+
+/* Land Section */
+#land {
+    padding: 6rem 0;
+}
+
+.land {
+    border-radius: 0.9;
+    background: #f0eeee;
+    overflow: hidden;
+}
+
+.land-cover {
+    height: 250px;
+}
+
+.land-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.land-info {
+    padding: 2rem 1.5rem;
+}
+
+.land-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.land h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.land-title a svg:hover {
+    fill: rgb(55, 165, 48);
+}
+
+.land-title a svg {
+    transition: 0.2s ease-in-out;
+}
+
+.land-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.land-tags div {
+    font-size: 0.9rem;
+    border: 1px solid wheat;
+    padding: 0.4rem 1rem;
+    color:rgb(140, 132, 132)
+}
+
+/* Contact Section */
+#contact {
+    padding: 6rem 0;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 5rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.7rem;
+}
+
+.contact-form input,
+ .contact-form textarea {
+    width: 100%;
+    padding: 1rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #f0eeee;
+    border: 1px solid #969393;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: rgb(55, 165, 48);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: #2a741c;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.0rem;
+}
+
+.contact-item-icon {
+    backg
+    round: #f0f0f0;
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: rgb(55, 165, 48);
+}
+
+/* Footer */
+footer {
+    padding: 4rem 0;
+    background: #f0eeee;
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0.5rem;
+}
+
+.footer icons svg {
+    fill: #7d7d7d;
+}
+
+.footer-icons a:hover svg {
+    fill: #000;
+}
